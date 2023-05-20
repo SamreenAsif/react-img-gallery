@@ -4,7 +4,7 @@ const UploadModel = require("../models/UploadModel");
 const router = Router();
 
 router.get( "/api/get" ,async (req ,res) =>{
-  const allPhotos = await UploadModel.find().sort({createAt : "descending"});
+  const allPhotos = await UploadModel.find().sort({createdAt : "descending"});
   res.send(allPhotos);
 })
 
