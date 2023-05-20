@@ -2,25 +2,61 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav{
+nav {
   background: rgb(61, 3, 114);
-  color : white ;
+  color: white;
   padding: 1rem 5rem;
 }
 
-.nav_logo{
+.nav_logo {
   letter-spacing: 1px;
 }
 
-.add-btn{
-  color :rgb(61, 3, 114) ;
+.add-btn {
+  color: rgb(61, 3, 114);
   font-size: 60px;
   height: 65px;
   position: fixed;
   right: 0;
   bottom: 0;
-  margin :2rem;
+  margin: 2rem;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap :% ; */
+}
+
+.grid_item {
+  flex: 0 0 25%; /* Set each item to occupy 25% width of the container */
+  box-sizing: border-box; /* Include padding and border in the item's width */
+  padding: 10px; /* Add some padding around grid items */
+  height: 25rem;
+  align-items: center;
+}
+
+.grid_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image while maintaining aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid_item {
+    flex-basis: 100%; /* Two items per row on screens up to 768px */
+  }
+  /* .grid_item img {
+    height: 80%; 
+  } */
+}
+
+@media (max-width: 480px) {
+  .grid_item {
+    flex-basis: 100%; /* One item per row on screens up to 480px */
+  }
 }

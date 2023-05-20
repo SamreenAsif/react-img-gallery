@@ -1,14 +1,34 @@
-import React from 'react'
-import {AiFillPlusCircle} from "react-icons/ai" ;
-const Button = () => {
+import React from "react";
+import { AiFillPlusCircle } from "react-icons/ai";
+import axios from "axios";
+const Button = ({setUpdateUI}) => {
+  const handleChange = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("photo", e.target.files[0]);
+
+    axios.post("http://localhost:5000/api/save" , formData)
+    .then((res) =>{
+      console.log(res.data);
+      setUpdateUI(res.data._id);
+    })
+    .catch((err)=>console.log(err));
+  };
   return (
     <div>
-      <label className="add-btn" htmlfor ="file_picker">
-        <AiFillPlusCircle/>
-        <input hidden type="file" name="file_picker" id="file_picker" />
+      <label className="add-btn" htmlFor="file_picker">
+        <AiFillPlusCircle />
+        <input
+          hidden
+          type="file"
+          name="file_picker"
+          id="file_picker"
+          onChange={(e) => handleChange(e)}
+        />
       </label>
     </div>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
