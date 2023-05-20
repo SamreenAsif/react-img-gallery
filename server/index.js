@@ -13,8 +13,7 @@ app.use(express.static("public"));
 
 const PORT = process.env.PORT || 5000;
 
-const url =
-  "mongodb+srv://Samreen:4524.smr@cluster0.0vamaay.mongodb.net/Gallery?retryWrites=true&w=majority";
+const url = "mongodb connection string"
 
 mongoose
   .connect(url, {
