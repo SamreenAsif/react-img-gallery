@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+nav{
+  background: rgb(61, 3, 114);
+  color : white ;
+  padding: 1rem 5rem;
+}
+
+.nav_logo{
+  letter-spacing: 1px;
+}
+
+.add-btn{
+  color :rgb(61, 3, 114) ;
+  font-size: 60px;
+  height: 65px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin :2rem;
+}
