@@ -13,6 +13,8 @@ nav {
 
 .nav_logo {
   letter-spacing: 1px;
+
+  font-size: 23px;
 }
 
 .add-btn {
@@ -26,37 +28,57 @@ nav {
 }
 
 .grid-container {
+  padding: 2%;
   display: flex;
   flex-wrap: wrap;
-  /* gap :% ; */
+  gap: 3%;
 }
 
 .grid_item {
-  flex: 0 0 25%; /* Set each item to occupy 25% width of the container */
-  box-sizing: border-box; /* Include padding and border in the item's width */
-  padding: 10px; /* Add some padding around grid items */
+  /* flex: 0 0 20%;
+  box-sizing: border-box;
+  padding: 20px;
   height: 25rem;
   align-items: center;
+  margin-bottom: 2%;
+  background-color: #2c2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Increased box shadow intensity */
+  flex: 0 0 31%;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 12rem;
+  align-items: center;
+  margin-bottom: 2%;
+  /* background-color: #2c2a2a; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .grid_item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Scale the image while maintaining aspect ratio */
+  object-fit: cover;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .grid_item {
-    flex-basis: 100%; /* Two items per row on screens up to 768px */
+    flex-basis: 100%;
   }
-  /* .grid_item img {
-    height: 80%; 
-  } */
 }
 
 @media (max-width: 480px) {
   .grid_item {
-    flex-basis: 100%; /* One item per row on screens up to 480px */
+    flex-basis: 100%;
   }
+}
+
+.content-body {
+  /* background: rgb(107, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(107, 58, 180, 1) 0%,
+    rgba(69, 94, 252, 1) 100%
+  ); */
 }
